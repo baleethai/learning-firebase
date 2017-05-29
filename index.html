@@ -3,28 +3,28 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Web for Firebase</title>
+	<title>Firebase for Web Application</title>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
 </head>
 <body>
 	<div class="mainDiv">
-		<h1 id="firebaseHeading">Loading ...</h1>
+		<h1 id="firebaseHeading">Firebase for Web Application</h1>
 		<p><textarea id="mainText"></textarea></p>
 		<button id="submitBtn" onclick="submitClick()">Submit</button>
 	</div>
 	<div id="table">
 		<table>
-			<caption>Buses</caption>
 			<thead>
 				<tr>
 					<th>Name</th>
-					<th>Status</th>
 					<th>Photo</th>
+					<th>Status</th>
 				</tr>
 			</thead>
-			<tbody>
-				<tr>
-					<td>data</td>
-				</tr>
+			<tbody id="table_body">
 			</tbody>
 		</table>
 	</div>

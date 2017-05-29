@@ -1,12 +1,11 @@
-var mainText = document.getElementById('mainText');
-var submitBtn = document.getElementById('submitBtn');
-var firebaseHeading = document.getElementById('firebaseHeading');
-var firebaseHeadingRef = firebase.database().ref().child("Heading");
-firebaseHeadingRef.on('value', function(dataSnapshot) {
-	firebaseHeading.innerText = dataSnapshot.val();
+$(document).ready(function() {
+	var rootRef = firebase.database().ref().child("buses");
+	rootRef.on('child_added', snap => {
+		var name   = snap.child("name").val();
+		var photo  = snap.child("photo").val();
+		var status = snap.child("status").val();
+		$("#table_body").append('<tr><td>'+name+'</td><td><img src="'+photo+'" width="50"></td><td>'+status+'</td></tr>');
+	});
+
+
 });
-function submitClick() {
-	var firebaseRef = firebase.database().ref();
-	var messageText = mainText.value;
-	firebaseRef.push().set(messageText);
-}
