@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Web for Firebase</title>
+</head>
+<body>
+	<div class="mainDiv">
+		<h1 id="firebaseHeading">Loading ...</h1>
+		<p><textarea id="mainText"></textarea></p>
+		<button id="submitBtn" onclick="submitClick()">Submit</button>
+	</div>
+	<div id="table">
+		<table>
+			<caption>Buses</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Status</th>
+					<th>Photo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>data</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBoGy1wg52Wsx0KpiC-aZCbmGpwbjmO8W0",
+	    authDomain: "scholabus-55bc7.firebaseapp.com",
+	    databaseURL: "https://scholabus-55bc7.firebaseio.com",
+	    projectId: "scholabus-55bc7",
+	    storageBucket: "scholabus-55bc7.appspot.com",
+	    messagingSenderId: "45242573000"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="js/script.js"></script>
+</body>
+</html>
